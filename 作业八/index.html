@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+	</head>
+	<body>
+		
+		
+		<center><label ><font color="brown" size="4" face="黑体">学号</font></label>
+		<input type="number" value="201905555613" style="color: midnightblue;" />
+		<label><font color="brown" size="4" face="黑体">姓名</font></label>
+		<input type="text" value="张佳欣" style="color: midnightblue;"/>
+		<button onclick="izone()"><a style="font-size: medium; ">增加</a></button></center>
+		
+		
+
+	<center><table border="2" id="table" height="50px" width="300px" "><tbody>
+				<tr align="center">
+					<td>姓名</td>
+					<td>学号</td>
+					<td>操作</td>
+				</tr>
+				<tr align="center" style="line-height:70px ;">
+					<td>张三</td>
+					<td>123456789</td>
+					<td><a href="#"  onclick="del(this);">删除</a></td></center>
+			
+
+			
+	
+        <script type="text/javascript">
+        	function izone(){
+             var table=document.getElementById("table");
+             var tr1=document.createElement("tr");
+             
+             var td1=document.createElement("td");
+             var td2=document.createElement("td");
+             var td3=document.createElement("td");
+                 td3.style.cssText="text-align: center;"
+            
+             
+             td1.innerHTML="<p align='center'>张佳欣</p>";
+             td2.innerHTML="<p align='center'>201905555613</p>";
+             td3.innerHTML="<a href='#' onclick='del(this);'>删除</a>"
+
+              tr1.appendChild(td1);
+              tr1.appendChild(td2);
+              tr1.appendChild(td3);
+
+             table.appendChild(tr1);
+        	}
+        	function del(obj){
+        		var tr=obj.parentNode.parentNode;
+        		tr.parentNode.removeChild(tr);
+        	}
+        </script>
+	</body>
+</html>
