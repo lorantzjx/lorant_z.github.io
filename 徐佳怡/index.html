@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>我不允许2019年过去了徐佳怡还是单身狗</title>
+		<style>
+			h2,
+			div,
+			table{
+				text-align: center;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			a:hover{
+				color: crimson;
+			}
+			
+			#table {
+				margin-top: 40px;
+				border-collapse: collapse;
+				width: 1080px;
+			}
+			
+			#submit {
+				border-radius: 3px;
+				outline: none;
+				border-width: 0px;
+				cursor: pointer;
+				width: 65px;
+				height: 30px;
+				background: rgba(0, 0, 0, .45);
+				font-family: "maiandra gd";
+				color: #FFFFFF;
+			}
+			
+			#submit:hover {
+				background: rgba(0, 0, 0, .5);
+			}
+			div img{
+				margin-top: 10px;
+			}
+		</style>
+		<script>
+			var count = 0;
+
+			function add() {
+				var a = document.createElement("tr");
+				var table = document.getElementById("table");
+				var name = document.getElementById("name").value;
+				var tel = document.getElementById("tel").value;
+				var others = document.getElementById("others").value;
+				table.innerHTML +=
+					"<tr id='" + count + "'>" +
+					"<td>" + name + "</td>" +
+					"<td>" + tel + "</td>" +
+					"<td>" + others + "</td>" +
+					'<td><a href="javascript:delet(' + count + ')">' +
+					"删除" +
+					"</a></td>" +
+					"</tr>";
+				count++;
+			}
+	
+			function delet(count) {
+				var row = document.getElementById(count);
+				row.remove(count);
+			}
+
+			function empty() {
+				var all;
+				for(; count > 0; count--) {
+					all = document.getElementById(count);
+					all.remove(count);
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<h2>徐佳怡在线相亲报名表</h2>
+		<center>
+			<div class="body">
+				
+				<div class="head">
+				姓名:&nbsp;<input type="text" id="name" />&nbsp;&nbsp;&nbsp;
+				联系方式:&nbsp;<input type="text" id="tel">&nbsp;&nbsp;&nbsp; 
+				备注:&nbsp;<input type="text" id="others">
+				</div>
+			</div>
+			<div class="button" style="margin: 10px 0 0 10px;">
+				<input type="button" value="确认报名" id="submit" onclick="add()" />
+				</div>
+			<div class="center" style="text-align: center;">
+					
+					<div id="left" style="width:43%;height: 100%;float: left;">
+					<marquee direction="right" dir="rtl">
+						<font><b style="color: red;">是个人就行，性别不限<sub>&nbsp;&nbsp;当事人徐某表示和她一样骚的优先</sub></b>
+						<br><font size="4">车</font><font size="5">车<font size="6">车</font><font size="7">车有求要！！！！</font></font>
+						<br><sub>(!!!!!三轮，滑板，自行车都行)</sub>
+						<br>只要能<u><mark>刷运动世界校园</mark></u>！！！</font>
+					</marquee>
+					</div>
+					
+					<div id="center" style="float: left;">
+					<img src="img/徐.jpg" style="width: 220px;height: 300px;"/>
+					<img src="img/徐1.jpg" style="width: 280px;height: 300px;"/>
+					<img src="img/徐2.jpg" style="width: 200px;height: 80%;"/>
+					</div>
+					
+					<div id="right" style="width:43%;height: 100%;float: left;">
+					<marquee direction="left">
+						<font><font style="color: blue;" size="6">#欢迎大家踊跃报名#</font>
+						<br>宝藏海南女孩等待大家发掘！！！!
+						<br><font size="5" color="crimson">相亲找她，她超甜，不骗感情只骗钱</font>
+						<br>我不允许2019年过去了徐佳怡还是单身狗
+						<br>照骗，身高体重，兴趣爱好等信息请私聊我小弟林欣叶，
+						<u><font size="4" color="#DC143C">价格好说</font></u>
+						<sub><徐佳怡脱单,张佳欣脱贫></sub>
+						<br/>各种撮合，偶遇服务也可一条龙安排
+						<br>事成请我吃顿饭就行~~</font>
+					</marquee>
+					</div>
+			
+				</div>
+
+			
+			<table border="1" id="table" cellpadding="10px">
+				<tr>
+					<td>姓名</td>
+					<td>联系方式</td>
+					<td>备注</td>
+					<td><a onclick="empty()">操作</a></td>
+				</tr>
+			</table>
+			
+		</center>
+	</body>
+
+</html>
